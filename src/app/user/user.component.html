@@ -1,0 +1,67 @@
+<!-- <div class="topcontainer">
+	<div class="main">  	
+		
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="txt" placeholder="User name" [(ngModel)]="signUpObj.userName" required="">
+                    <div class="form-text text-danger" *nngif="">
+                        UserName is Required
+                    </div>
+					<input type="email" name="email" placeholder="Email" [(ngModel)]="signUpObj.email" required="">
+					<input type="password" name="pswd" placeholder="Password" [(ngModel)]="signUpObj.password" required="">
+					<button (click)="onSignUp()">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="text" name="Username" placeholder="UserName" [(ngModel)]="loginObj.userName" required="">
+					<input type="password" name="pswd" placeholder="Password" [(ngModel)]="loginObj.password" required="">
+					<button (click)="onLogin()">Login</button>
+				</form>
+			</div>
+            
+	</div>
+</div> -->
+
+<h2>Todo List</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input type="text" name="txt" placeholder="User name" [(ngModel)]="signUpObj.userName" required="">
+			<input type="email" name="email" placeholder="Email" [(ngModel)]="signUpObj.email" required="">
+			<input type="password" name="pswd" placeholder="Password" [(ngModel)]="signUpObj.password" required="">
+			<button (click)="onSignUp()">Sign up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<input type="text" name="Username" placeholder="UserName" [(ngModel)]="loginObj.userName" required="">
+			<input type="password" name="pswd" placeholder="Password" [(ngModel)]="loginObj.password" required="">
+			<button (click)="onLogin()">Login</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
