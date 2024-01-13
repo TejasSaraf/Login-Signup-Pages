@@ -44,7 +44,7 @@
 			<h1>Sign in</h1>
 			<input type="text" name="Username" placeholder="UserName" [(ngModel)]="loginObj.userName" required="">
 			<input type="password" name="pswd" placeholder="Password" [(ngModel)]="loginObj.password" required="">
-			<button (click)="onLogin()">Login</button>
+			<button (click)="onLogin()" routerLink="[/Todo]">Login</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -62,6 +62,4 @@
 		</div>
 	</div>
 </div>
-
-
 

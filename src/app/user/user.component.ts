@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -22,7 +22,7 @@ export class UserComponent implements OnInit{
     passwor: ''
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers');
@@ -46,8 +46,7 @@ export class UserComponent implements OnInit{
     const isUserExist = this.signUpUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
     if(isUserExist != undefined)
     {
-      alert('User Login Successfully');
-      
+      this.router.navigate(['/', 'todo']);
     }
     else{
       alert('Incorrect Credential');
